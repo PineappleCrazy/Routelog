@@ -48,7 +48,7 @@ body {
 .launch-section .btn-secondary {
     padding: 10px 20px;
     background-color: #e0e0e0;
-    color: #333;
+    color: #1e40af;
     border-radius: 6px;
     text-decoration: none;
     font-weight: 600;
@@ -274,7 +274,7 @@ body {
 }
 
 .country-tag {
-    background: white;
+    background: #5376d8;
     padding: 8px 16px;
     border-radius: 24px;
     font-size: 14px;
@@ -290,9 +290,9 @@ body {
 }
 
 .country-tag.upcoming {
-    background: #dbeafe;
-    border-color: #93c5fd;
-    color: #1e3a8a;
+    background: #c4c4c4;
+    border-color: #707070;
+    color: #3a3a3a;
 }
 
 .how-it-works {
@@ -515,4 +515,132 @@ footer p {
     .download-buttons {
         flex-direction: column;
     }
+}
+
+
+/* === Legend tab styles (top-left floating card, matches .feature-card) === */
+.legend-tab-top-left { position: absolute; left: 24px; top: 24px; z-index: 60; pointer-events: none; }
+.coverage-map-wrap { position: relative; } /* ensure positioning context */
+.legend-tab-top-left .legend-inner {
+  pointer-events: auto;
+  background: var(--bg-alt, #fff);
+  border-radius: 12px;
+  padding: 8px 14px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+  border: 1px solid var(--border, rgba(0,0,0,0.06));
+  display:inline-flex;
+  gap:12px;
+  align-items:center;
+  transform: translateY(0px);
+}
+svg path.hovered { filter: brightness(1.15); transition: filter 120ms ease; cursor: pointer; }
+
+
+
+
+/* === Legend key colours (matches map colours) === */
+.legend-box.supported {
+  background-color: #1d4ed8; /* Supported (dark blue) */
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.legend-box.partial {
+  background-color: #d97706; /* Partially Supported (orange) */
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.legend-box.upcoming {
+  background-color: #9ca3af; /* Coming Soon (grey) */
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* === Legend spacing and size adjustments === */
+.legend-tab {
+  margin-top: 2rem; /* space before the map and legend */
+}
+
+.legend-box {
+  width: 22px;    /* larger colour squares */
+  height: 22px;
+  margin-right: 8px;
+  border-radius: 4px;
+}
+
+
+
+/* === Legend layout refinement === */
+.legend-inner {
+  display: flex;
+  gap: 16px; /* spacing between the word groups */
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.legend-box {
+  width: 22px;
+  height: 22px;
+  margin-right: 4px; /* smaller gap between box and label */
+  border-radius: 4px;
+  vertical-align: middle;
+}
+
+
+
+/* === Legend layout fine-tuning === */
+.legend-inner {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px; /* wider gap between the three groups */
+}
+
+.legend-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px; /* smaller gap between box and label */
+}
+
+.legend-box {
+  width: 22px;
+  height: 22px;
+  border-radius: 4px;
+  vertical-align: middle;
+}
+
+
+
+/* === GitHub icon in navbar === */
+.github-icon {
+  width: 22px;
+  height: 22px;
+  filter: invert(25%) sepia(10%) saturate(200%) hue-rotate(180deg);
+  transition: filter 0.2s, transform 0.2s;
+  vertical-align: middle;
+}
+
+.github-link:hover .github-icon {
+  filter: invert(15%) sepia(100%) saturate(800%) hue-rotate(200deg);
+  transform: scale(1.1);
+}
+
+/* === Responsive navbar behavior === */
+@media (max-width: 768px) {
+  .nav-links a:not(.github-link) {
+    display: none; /* hide text links */
+  }
+
+  .github-link {
+    display: inline-block;
+  }
+
+  .nav-links {
+    gap: 12px; /* tighter spacing on small screens */
+  }
+
+  .github-icon {
+    width: 26px;
+    height: 26px;
+  }
 }

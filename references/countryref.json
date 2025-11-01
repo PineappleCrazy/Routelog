@@ -356,6 +356,7 @@
     "eddm_nh_app": ["EDDM"],
     "eddn_frk_app": ["EDDN"],
     "eddp_trs_app": ["EDDC", "EDDE", "EDDP"],
+    "eddr_pfa_app": ["EDDR", "EDFH"],
     "edds_stg_app": ["EDDS", "EDSB"],
     "eddv_app": ["EDDV"],
     "eddv_a_app": ["EDDV"],
