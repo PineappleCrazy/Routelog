@@ -94,7 +94,7 @@ def search_navaid():
     navaid = input("\nEnter navaid identifier: \n\n")
     navaid = navaid.lower()
     try:
-        print(f"\n{navaids[f"{navaid}"]["name"]} | {navaids[f"{navaid}"]["type"]}")
+        print(f"\n{navaids[navaid]['name']} | {navaids[navaid]['type']}")
         country_id = navaids[f"{navaid}"]["country"]
         print(country_names[country_id])
         print(f"{navaids[f"{navaid}"]["freq"]}")
