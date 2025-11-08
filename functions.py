@@ -97,7 +97,7 @@ def search_navaid():
         print(f"\n{navaids[navaid]['name']} | {navaids[navaid]['type']}")
         country_id = navaids[f"{navaid}"]["country"]
         print(country_names[country_id])
-        print(f"{navaids[f"{navaid}"]["freq"]}")
+        print(f"{navaids[navaid]['freq']}")
     except KeyError:
         print("\nNavaid info unavailable, or inputs invalid!")
 

@@ -269,6 +269,7 @@ def viewall():
                 grab = line.strip()
                 title = (f"\n{grab[:4]} - {grab[4:8]} | {airlines.get(grab[8:11])}\n")
                 title = title.upper()
+                print(title)
 
                 coord1 = airpcoords[grab[:4]][0] + ", " + airpcoords[grab[:4]][1]
                 coord2 = airpcoords[grab[4:8]][0] + ", " + airpcoords[grab[4:8]][1]
@@ -476,13 +477,13 @@ def setFIR():
             file.write('lccc')
             print('\nSet your home FIR to LCCC - Thanks!\nRestart program for changes to take effect\n')
     else:
-        print("FIR entry invalid, or unsupported FIR. Currently supported: EBBU")
+        print("FIR entry invalid, or unsupported FIR. Currently supported: EETT")
 
 
 def welcome():
     print('Welcome to Routelog! - your comprehensive tracker of all flight progress\n\nTo begin, please select your wanted aircraft types using the -9- function you will be prompted with next\n')
     print("Function information can be found in README.md\nThanks,")
-    print("\nYou are currently on NO routedata. To use our official data, import through the shuttle (follow funct. 12)\n")
+    print("\nYou are currently on NO routedata. To use our official data, import through the shuttle (follow funct. 13)\n")
     a = input('\nPress ENTER to continue: ')
     with open(logtxt,'w') as file:
         file.write("entry")
@@ -536,7 +537,7 @@ if firstTime != 1:
 
 if valid == 1:
     while True:
-        choice = input("\n - - - - - - - - - - - - -\n\nWould you like to: \n\n1 - Add a route\n2 - View a specific route\n3 - Mark flight as complete\n4 - Mark flight as uncomplete\n5 - View all routes\n6 - View filtered routes\n7 - Add an aircraft to a route\n8 - Add a route number\n9 - Select your aircraft\n10 - Select your based FIR\n\nAdditional Programs:\n11 - Gatefinder\n12 - Navaid Info\n\nExtras:\n13 - Data settings\n\n") # beautifully simple
+        choice = input("\n - - - - - - - - - - - - -\n\nWould you like to: \n\n1 - Add a route\n2 - View a specific route\n3 - Mark flight as complete\n4 - Mark flight as uncomplete\n5 - View all routes\n6 - View filtered routes\n7 - Add an aircraft to a route\n8 - Add a route number\n9 - Select your aircraft\n10 - Select your based FIR\n\nAdditional Programs:\n11 - Gatefinder (UNAVAIL)\n12 - Navaid Info\n\nExtras:\n13 - Data settings\n\n") # beautifully simple
         if choice == '1':
             add()
         elif choice == '2':
@@ -558,7 +559,7 @@ if valid == 1:
         elif choice == '10':
             setFIR()
         elif choice == '11':
-            selectImage()
+            print("\nUnavail\n")
         elif choice == '12':
             search_navaid()
         elif choice == '13':
