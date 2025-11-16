@@ -1,6 +1,12 @@
 {
     "ebbu": ["EBAW", "EBBR", "EBCI", "EBLG", "EBOS", "ELLX"],
+    "eett": ["EEKA", "EEKE", "EETN", "EETU"],
+    "efin": ["EFHK", "EFIV", "EFJO", "EFJY", "EFKS", "EFKT", "EFKU", "EFLP", "EFMA", "EFOU", "EFRO", "EFTP", "EFTU", "EFVA"],
     "ehaa": ["EHAM", "EHBK", "EHEH", "EHGG", "EHRD"],
+    "epww": ["EPBY", "EPGD", "EPKK", "EPKT", "EPLB", "EPLL", "EPMO", "EPPO", "EPRA", "EPRZ", "EPSC", "EPSY", "EPWA", "EPWR", "EPZG"],
+    "esaa": ["ESDF", "ESGG", "ESKS", "ESMQ", "ESMS", "ESMT", "ESMX", "ESNN", "ESNO", "ESNQ", "ESNS", "ESNU", "ESNX", "ESNZ", "ESOE", "ESOK", "ESOW", "ESPA", "ESSA", "ESSD", "ESSL", "ESSV", "ESTA"],
+    "evrr": ["EVRA"],
+    "eyvl": ["EYKA", "EYPA", "EYVI"],
     "gccc": ["GCFV", "GCGM", "GCHI", "GCLA", "GCLP", "GCRR", "GCTS", "GCXO"],
     "gmmm": ["GMAD", "GMAG", "GMAT", "GMAZ", "GMFF", "GMFK", "GMFO", "GMMD", "GMME", "GMMH", "GMMI", "GMML", "GMMN", "GMMW", "GMMX", "GMMZ", "GMTA", "GMTN", "GMTT"],
     "gooo": ["DIAP", "DIBK", "DIKO", "DIOD", "DISP", "GABS", "GBYD", "GGOV", "GOBD", "GOGS", "GQNI", "GQNO", "GQPP", "GQPZ"],

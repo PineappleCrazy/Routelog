@@ -1,10 +1,21 @@
 # --- WELCOME ---
 
+disSkip = False
+
 import shutil # module to backup files
 import os
 import clr # for cs
 import json
 from functions import search_navaid, selectImage, inputVal, inputVal1, airlVal, aircVal, numVal, distanceCalc
+
+"""try:
+    from discord import run, refresh
+except ImportError:
+    disSkip = True
+    pass
+
+if disSkip == False:
+    run()"""
 
 dll_path = os.path.join(os.path.dirname(__file__), 'RouteProcessor.dll')
 clr.AddReference(dll_path) # referencing dll to be used to fetch routenums
@@ -108,6 +119,8 @@ def add():
             with open(routestxt, 'w') as file:
                 file.writelines(sorted_lines)
             print('\nRoute added succesfully. Thanks!\n')
+            """if disSkip == False:
+                refresh()"""
             backup()
         else:
             print("\nYou must select an aircraft. Addition failed.")
@@ -203,6 +216,8 @@ def addnum():
         with open(routenumtxt,'w') as file:
             file.writelines(lines)
         print('\nFlight num added succesfully!') # adding routenumber is 2 prior criteria are valid
+        """if disSkip == False:
+                refresh()"""
 
     if found == True:
         print('\nFlight num already found!')
@@ -242,6 +257,8 @@ def addacft():
                 readd = grab[:11] + "".join(acfts)
                 lines[i] = readd + '\n'
                 print('\nAircraft added, thanks!')
+                """if disSkip == False:
+                    refresh()"""
                 break
             else:
                 print('\nAircraft already in database!')
@@ -295,7 +312,7 @@ def viewall():
                         else:
                             print(f"The aircraft {aircraft[:-1]} does not exist within the list!")
 
-                        print("\n - ")
+                print("\n - ")
     if allRts > 0:
         print(f'\n{allRts-incompRts} flights completed of {allRts} total.\n')
         print(f'% completion: {100*((allRts-incompRts)/allRts)}\n\nRoutes for {localFIR.upper()} FIR') # nice little stats after the spewage.. fun. Gives total and percentage for now
@@ -452,32 +469,32 @@ def setFIR():
         with open(firtxt,'w') as file:
             file.write('unselected')
             print('\nRemoved your home FIR!\nRestart program for changes to take effect\n')
-    elif FIRentry == 'ebbu' or FIRentry == 'EBBU':
+    elif FIRentry == 'eett' or FIRentry == 'EETT':
         with open(firtxt,'w') as file:
-            file.write('ebbu')
-            print('\nSet your home FIR to EBBU - Thanks!\nRestart program for changes to take effect\n')
-    elif FIRentry == 'ehaa' or FIRentry == 'EHAA':
+            file.write('eett')
+            print('\nSet your home FIR to EETT - Thanks!\nRestart program for changes to take effect\n')
+    elif FIRentry == 'evrr' or FIRentry == 'EVRR':
         with open(firtxt,'w') as file:
-            file.write('ehaa')
-            print('\nSet your home FIR to EHAA - Thanks!\nRestart program for changes to take effect\n')
-    elif FIRentry == 'gccc' or FIRentry == 'GCCC':
+            file.write('evrr')
+            print('\nSet your home FIR to EVRR - Thanks!\nRestart program for changes to take effect\n')
+    elif FIRentry == 'eyvl' or FIRentry == 'EYVL':
         with open(firtxt,'w') as file:
-            file.write('gccc')
-            print('\nSet your home FIR to GCCC - Thanks!\nRestart program for changes to take effect\n')
-    elif FIRentry == 'gmmm' or FIRentry == 'GMMM':
+            file.write('eyvl')
+            print('\nSet your home FIR to EYVL - Thanks!\nRestart program for changes to take effect\n')
+    elif FIRentry == 'efin' or FIRentry == 'EFIN':
         with open(firtxt,'w') as file:
-            file.write('gmmm')
-            print('\nSet your home FIR to GMMM - Thanks!\nRestart program for changes to take effect\n')
-    elif FIRentry == 'gvsc' or FIRentry == 'GVSC':
+            file.write('efin')
+            print('\nSet your home FIR to EFIN - Thanks!\nRestart program for changes to take effect\n')
+    elif FIRentry == 'epww' or FIRentry == 'EPWW':
         with open(firtxt,'w') as file:
-            file.write('gvsc')
-            print('\nSet your home FIR to GVSC - Thanks!\nRestart program for changes to take effect\n')
-    elif FIRentry == 'lccc' or FIRentry == 'LCCC':
+            file.write('epww')
+            print('\nSet your home FIR to EPWW - Thanks!\nRestart program for changes to take effect\n')
+    elif FIRentry == 'esaa' or FIRentry == 'ESAA':
         with open(firtxt,'w') as file:
-            file.write('lccc')
-            print('\nSet your home FIR to LCCC - Thanks!\nRestart program for changes to take effect\n')
+            file.write('esaa')
+            print('\nSet your home FIR to ESAA - Thanks!\nRestart program for changes to take effect\n')
     else:
-        print("FIR entry invalid, or unsupported FIR. Currently supported: EETT")
+        print("FIR entry invalid, or unsupported FIR. Currently supported: EETT, EFIN, EPWW, ESAA, EVRR, EYVL")
 
 
 def welcome():
