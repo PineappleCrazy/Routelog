@@ -1,7 +1,7 @@
 # Welcome to Routelog!
 
 This nifty program stores your routes and completion progress, allowing you to add and manage routes seamlessly.
-We currently have around 4,000 flights stored, allowing you to keep track of and achieve your flying goals
+We currently have around 1,200 flights stored, allowing you to keep track of and achieve your flying goals
 
 For additional programs such as **gatefinder** and **navaid info**, view below function guides
 
@@ -14,35 +14,17 @@ Run the [batch file](https://github.com/PineappleCrazy/Routelog/blob/main/_route
 
 
 ### Where is supported?
-We proudly (fully) support over 100 aerodromes over 16 different countries.
+We proudly (fully) support over 50 aerodromes over 6 different countries.
 
 **Countries fully supported:**
-> + Belgium
-> + Cape Verde
-> + Gambia
-> + Gibraltar
-> + Guinea
-> + Guinea-Bissau
-> + Ireland
-> + Luxembourg
-> + Mauritania
-> + Morocco
-> + Portugal
-> + Scotland
-> + Senegal
-> + Sierra Leone
-> 
+> + Estonia
+> + Finland
+> + Latvia
+> + Lithuania
+> + Sweden
+
 **Countries partially supported:**
-> + Netherlands
-> + Spain
-
-**Countries coming soon:**
-> + Algeria
-> + England
-
-![alt text](https://github.com/PineappleCrazy/Routelog/blob/main/images/git/supported161025.png)
-
-Aerodromes with full coverage, up-to-date as per dataset update 12/10/25
+> + Poland
 
 
 ## Guides:
@@ -84,10 +66,6 @@ This function lets you choose which aircraft you'll be prompted with when adding
 Routes will only be displayed if they are to/from your home FIR. Enter `any` to disregard this. Your home FIR can be changed at any time.
 
 ## Additional Programs / Settings:
-
-### Gatefinder
-This function prompts you with a parking chart for a selected airport and airline. Their primary parking at this airport is displayed.
-Currently supported:   `ELLX`
 
 ### Navaid Info
 This function provides you with information on Navaids based on their identifier given. It provides a name, country, equiptment type and frequency. Currently supported: `Belgium`, `Ireland`, `Luxembourg`
